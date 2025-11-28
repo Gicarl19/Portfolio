@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: black;
+    color: orange;
+}
+header{
+    margin-top: 2%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+}
+.logo{
+    font-size: 3rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.logo:hover{
+    transform: scale(1.1);
+}
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+nav a:hover,
+nav a.active{
+    color: #FFA500;
+    border-bottom: 3px solid #FFA500;
+}
+
+@media(max-width: 995px){
+    nav{
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid #FFA500;
+        border-bottom: 3px solid #FFA500;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0,0,0,0.1);
+    }
+   
+    nav.active{
+        display: block;
+    }
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem;
+    }
+    nav a:hover,
+    nav a.active{
+        border-radius: 0.5rem;
+        padding: 1rem;
+        border-bottom: 0.5rem solid #FFA500;
+    }
+}
+
+section{
+    min-height: 120vh;
+    padding: 5rem 2% 5rem;
+
+}
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem;
+    background-color: black;
+}
+.home .home-content h1{
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.5;
+    color: white;
+}
+span{
+    color: #FFA500;
+}
+.home-content h3{
+    font-size: 3rem;
+ 
+}
+.home-content p{
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+    color: #CCCCCC;
+    line-height: 1.8;
+}
+.home-img{
+    border-radius: 50%;
+
+}
+.home-img img{
+    position: relative;
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid #FFA500;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 6rem;
+    background-color: transparent;
+    border: 0.3rem solid #FFA500;
+    font-size: 2.8rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: white;
+}
+.social-icons a:hover{
+    background-color: #FFA500;
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    box-shadow: 0 0 25px solid #FFA500;
+}
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    font-size: 1.6rem;
+    letter-spacing: 0.3rem;
+    color: #FFA500;
+    font-weight: 600;
+    border: 2px solid #FFA500;
+    transition: 0.3s ease;
+    cursor: pointer;
+    border-radius: 50px;
+   
+}
+
+.btn:hover{
+    transform: scale3d(1.03);
+    background-color: #FFA500;
+    color: black;
+    box-shadow: 0 0 25px solid #FFA500;
+   
+}
+.typing text{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+.typing-text span{
+    position: relative;
+}
+.typing-text span::before{
+    content: ' Front-End Developer';
+    color: #FFA500;
+    animation: words 20s infinite;
+}
+.typing-text span::after{
+    content: '';
+    position: absolute;
+    right: -8;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: black;
+    border-left: 3px solid ;
+    animation: cursor 0.6s infinite;
+}
+@keyframes cursor{
+   to{
+    border-left: 3px solid transparent;
+   }
+}
+
+@keyframes words{
+    0%,20%{
+        content: 'Web Developer';
+    }
+    21%,40%{
+        content: 'Web Designer';
+    }
+    41%,60%{
+        content: 'UI/UX Designer';
+    }
+    61%,80%{
+        content: 'Freelancer';
+    }
+    81%,100%{
+        content: 'Full-Stack Developer';
+    }
+}
+@media(max-width: 1000px){
+    .home{
+        gap: 4rem;
+    }
+    .home-img img{
+        width: 60vw;
+        height: auto;
+    }
+}
+
+@media(max-width: 995px){
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+    .home .home-content h3{
+        font-size: 3rem;
+    }
+    .home-content h1{
+        font-size: 2.5rem;
+    }
+    .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
