@@ -20,7 +20,7 @@ body{
 }
 header{
     margin-top: 2%;
-    position: fixed;
+    position: static;
     top: 0;
     left: 0;
     width: 100%;
@@ -87,7 +87,7 @@ nav a.active{
 
 section{
     min-height: 120vh;
-    padding: 5rem 2% 5rem;
+    padding: 5rem 10% 5rem;
 
 }
 .content{
@@ -98,14 +98,51 @@ section{
     display: flex;
     margin-top: 50px;
 }
-.content ul li{
+.content ul {
     list-style: none;
-    font-size: 1.8rem;
-    margin: 1rem 0;
+    padding: 0;
 }
-.content ul li a{
-    color: white;
-    transition: 0.3s ease;
-    margin: 5px;
-    
+
+.content li {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.content li {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+/* Hide links by default */
+.content li a {
+    display: none;
+    margin-left: 10px;
+    font-size: 18px;
+    color: orangered;
+    text-decoration: none;
+    line-height: 3.5rem;
+}
+
+/* Show link when hovering on the li or h2 */
+.content li:hover a {
+    display: block;
+}
+
+/* Header styling */
+.content li h2 {
+    font-size: 22px;
+    margin: 0;
+    padding: 8px 0;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.content li h2:hover {
+    color: orange;
 }
